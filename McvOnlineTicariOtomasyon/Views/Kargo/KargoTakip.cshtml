@@ -1,0 +1,24 @@
+﻿@using McvOnlineTicariOtomasyon.Models.siniflar;
+@model List<KargoTakip>
+@{
+    ViewBag.Title = "KargoTakip";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br /> 
+<h2>Kargo Takip</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Açıklama</th>
+        <th>Tarih</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Aciklama</td>
+            <td>@x.Tarih</td>
+
+        </tr>
+    }
+</table>
+

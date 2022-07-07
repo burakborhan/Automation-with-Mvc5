@@ -1,0 +1,16 @@
+﻿@model McvOnlineTicariOtomasyon.Models.siniflar.Class3
+@{
+    ViewBag.Title = "Deneme";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<div>
+    <h2>Kategoriler - Ürünler</h2>
+</div>
+<br />
+<div>
+    @Html.Label("Kategoriler")
+    @Html.DropDownList("DrpKategori", Model.Kategoriler, "---Kategori Seçiniz---", new { @class = "form-control" })
+</div>
+

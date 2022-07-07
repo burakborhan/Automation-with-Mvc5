@@ -1,0 +1,29 @@
+﻿@using McvOnlineTicariOtomasyon.Models.siniflar
+@model List<Personel>
+@{
+    ViewBag.Title = "DepartmanDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Departman Detay Sayfası</h2>
+<br />
+
+<ol class="breadcrumb m-4">
+    <li class="breadcrumb-item active">Departman Adı : @ViewBag.d</li> 
+</ol>
+
+<table class="table table-hover">
+    <tr>
+
+        <th>Personel</th>
+        <td>Satışlar</td>
+    </tr>
+    @foreach (var u in Model)
+    {
+    <tr>
+        <td>@u.PersonelAd @u.PersonelSoyad</td>
+        
+        <td><a href="/Departman/DepartmanPersonelSatis/@u.PersonelId"class="btn btn-dark">Satışlar</a></td>
+    </tr>
+    }
+</table>
